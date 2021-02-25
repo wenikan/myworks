@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<!---<html lang="en" xmlns="http://www.w3.org/1999/xhtml">-->
+<head>
+    <meta charset="utf-8" />
+    <title>溫慶榆的作品集</title>
+    <!--<link rel="stylesheet" href="css/style.css" type="text/css">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    
+<style>
+    body
+    {
+        background-color: #48594f;
+        font-family: "Microsoft JhengHei";
+    }
+    h3
+    {
+      color: white;
+    }
+    .workContent
+    {
+        
+        /*align-items: center;*/
+        width: 80%;
+        height: auto;
+        background-color: #607a6b;
+        border-radius: 10px;
+        padding: 30px 30px 30px 30px;
+        
+        margin-bottom: 70px;
+        
+       
+    }
+    .Content img
+    {
+        width: 200px; height: 200px;
+        margin: 10px 10px 10px 10px;
+        border-radius: 10px; 
+        border: 2px solid white;
+  
+    }
+    .ContentImg
+    {
+
+        align-items: center;
+        justify-content: center;
+    }
+    .Content h4
+    {
+        
+        margin: 10px;
+        padding-top: 3px;
+        color: white;
+        text-align: center;
+    }
+    .Content
+    {
+        display: flex;
+        flex-wrap: wrap; 
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+   
+    ul
+    {
+        /*right: 0px;*/
+    }
+    li
+    {
+        display: inline;
+        margin: 10px;
+        padding: 3px;
+        font-size: 25px;
+        
+    }
+    a:link
+    {
+        text-decoration:none;
+        color: white;
+    }
+    a:hover 
+    {
+        /*設定滑鼠移經的連結*/
+        text-decoration:none; 
+        color: white;
+    }
+    .works
+    {
+        display: flex;
+        padding: 5px;
+        margin: 30px 10px 10px 10px;
+        
+    }
+    .Content>.text
+    {
+        color: white;
+        margin: 20px;
+        
+    }
+    .awards
+    {
+        color: white;
+        margin: 50px 30px 50px 30px;;
+    }
+    .demo
+    {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .demo>img
+    {
+        /*1280*720*/
+        width: 45%;
+        /*padding: 5px;*/
+        margin: 15px;
+        /*text-align: center; 
+        display: flex;
+        flex-direction: column;    */  
+        
+    }
+    .demo>iframe
+    {
+        width: 95%;
+        /*
+        width: 902px;
+        height: 510px;*/
+        /* padding: 5px;*/
+        margin: 15px;
+        /*margin: 30px 15px 10px 15px;*/
+       
+    }
+    .demo>#video
+    {
+        width: 30%;
+        cursor: pointer;
+       /* margin: 5px 15px 10px 15px;
+        padding: 5px;*/
+    }
+    .demo>h4
+    {
+        color: white;
+        margin: 40px 15px 10px 15px;
+        padding: 5px;
+    }
+    .experience
+    {
+        background-color: #485A58;
+        border-radius: 10px;
+        margin: 40px 15px 10px 30px;
+        padding: 5px;
+    }
+    .experience h4
+    {
+        color: white;
+        margin: 10px 15px 10px 10px;
+        padding: 10px;
+    }
+    .experience h6
+    {
+        color: white;
+        margin: 10px 15px 10px 10px;
+        padding: 10px;
+    }
+    
+    @media (min-width: 701px) and (max-width: 1200px)
+    {
+        .demo>img
+        {
+            width: 42%;
+        }
+    }
+    @media (min-width: 321px) and (max-width: 700px)
+    {
+        .demo>img
+        {
+            width: 90%;
+        }
+        h4
+        {
+            font-size: 18px;
+        }
+        
+       
+        
+    }
+</style>
+    
+<script>
+    var video;
+    window.onload=function(){
+        video=document.getElementById("video");
+        /*
+        video.width=30;
+        video.height=480;*/
+        
+    }
+    function playVideo(){
+        video.play();
+    }
+    function pauseVideo(){
+        video.pause();
+    }
+    function replayVideo(){
+        video.currentTime=0;
+        video.play();
+    }
+    $(document).ready(function(){
+        $('#video').click(function(){
+            playVideo();
+            
+        });
+    });
+</script>
+    
+</head>
+
+
+
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="about.html">關於我</a></li>
+            <li><a href="works.html">作品</a></li>
+            <li><a href="contact.html">聯絡我</a></li>
+        </ul>
+    </nav>
+    
+    
+    <!------------------------------>
+    <div  style="display: flex; flex-direction: column; align-items: center;">
+        
+        <div class="workContent">
+            <h3>影音設計 Video Editor</h3>
+            <div class="works">
+                <div class="Content">
+                    <div class="ContentImg"><img src="img/dream/dream.png"/></div>
+                    <div class="text">
+                    <h4><b>夢醒時分</b></h4>   
+                    <br/>
+                    
+                    <h6>每個人都會做夢，也許做夢是潛意識的表達，或受心理因素而影響，但夢醒後，該好好面對真實世界。</h6>
+                    
+                    </div>
+                </div>             
+            </div>
+            
+            <div class="awards">
+                <h4></h4>
+                
+            </div>
+            
+            <div class="demo">
+                <img src="img/dream/dream01.png">
+                <img src="img/dream/dream02.png">
+                <img src="img/dream/dream03.png">
+                <img src="img/dream/dream04.png">
+                <img src="img/dream/dream05.png">
+                <img src="img/dream/dream06.png">
+                <img src="img/dream/dream07.png">
+                <img src="img/dream/dream08.png">
+                <img src="img/dream/dream09.png">
+                <img src="img/dream/dream10.png">
+                
+                <iframe  src="https://www.youtube.com/embed/isKsGd7rE7A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                
+            </div>
+            
+           
+            
+            
+        </div>
+    
+    
+    
+               
+       
+    </div>
+        
+</body>
+</html>
